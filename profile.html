@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Profile</title>
+    <style>
+        /* Reset default margin and padding for all elements */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            background-image: url() ;
+            
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 800px;
+            position: absolute;
+            left: 25%;
+        }
+
+        .profile-image-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-picture {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            border: 4px solid #3498db;
+        }
+
+        .update-section {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        .toggle-buttons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .toggle-button {
+            background-color: #95a5a6;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .toggle-button.active {
+            background-color: #27ae60;
+        }
+
+        .toggle-button:hover {
+            background-color: #2c3e50;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .personal-details,
+        .contact-details {
+            padding: 20px;
+        }
+
+        .personal-details p,
+        .contact-details p {
+            margin: 5px 0;
+            color: #333;
+        }
+
+        .personal-details.hidden,
+        .contact-details.hidden {
+            display: none;
+        }
+
+        #update-button {
+            order: 3;
+        }
+    </style>
+</head>
+<body>
+<div class="profile-image-container">
+    <br>
+    <br>
+    <br>
+    <img src="/Images/Anil.jpg" alt="Profile Picture" class="profile-picture">
+</div>
+<div class="container">
+    <center><h2>Information</h2></center>
+    <div class="personal-details">
+        <!-- Personal Details content here -->
+        <p><strong>First Name :</strong> Your Job Title</p>
+        <p><strong>Last Name :</strong> Your Company</p>
+        <p><strong>Username :</strong> Your Location</p>
+        <p><strong>Gender :</strong> Your email.</p>
+        <p><strong>Date of Birth :</strong> Your dob.</p>
+    </div>
+    <div class="contact-details hidden">
+        <!-- Contact Details content here -->
+        <p><strong>Email :</strong> your.email@example.com</p>
+        <p><strong>Phone no :</strong> (123) 456-7890</p>
+        <p><strong>Location :</strong> your location</p>
+        <p><strong>Address :</strong> Address</p>
+        <p><strong>Pincode :</strong> your location</p>
+    </div>
+    <div class="toggle-buttons">
+        <button class="toggle-button active" id="personal-info-button">Personal Information</button>
+        <button class="toggle-button" id="contact-info-button">Contact Information</button>
+    </div>
+    <div class="update-section">
+        <h2>Update Your Information</h2>
+        <button id="update-button">Update</button>
+    </div>
+</div>
+
+<!-- Add buttons to toggle between Personal and Contact Information -->
+<script>
+    // JavaScript to toggle between Personal and Contact Information
+
+    // Get the elements
+    const personalDetails = document.querySelector('.personal-details');
+    const contactDetails = document.querySelector('.contact-details');
+    const personalInfoButton = document.getElementById('personal-info-button');
+    const contactInfoButton = document.getElementById('contact-info-button');
+    const updateButton = document.getElementById('update-button');
+
+    // Function to show Personal Information and hide Contact Information
+    function showPersonalInfo() {
+        personalDetails.classList.remove('hidden');
+        contactDetails.classList.add('hidden');
+        personalInfoButton.classList.add('active');
+        contactInfoButton.classList.remove('active');
+        updateButton.style.order = '3';
+    }
+
+    // Function to show Contact Information and hide Personal Information
+    function showContactInfo() {
+        personalDetails.classList.add('hidden');
+        contactDetails.classList.remove('hidden');
+        personalInfoButton.classList.remove('active');
+        contactInfoButton.classList.add('active');
+        updateButton.style.order = '2';
+    }
+
+    // Add click event listeners to the buttons
+    personalInfoButton.addEventListener('click', showPersonalInfo);
+    contactInfoButton.addEventListener('click', showContactInfo);
+
+    // Initially, show Personal Information by default
+    showPersonalInfo();
+</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+     /* Prevent vertical scrolling */
+  }
+  
+  
+  .navbar-OG {
+    overflow: hidden;
+    background-color:transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    transition: background-color 0.3s ease-in-out;
+    z-index: 1000; 
+  }
+
+  .navbar-OG a {
+    float: left;
+    display: block;
+    color: rgb(30, 102, 144);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .navbar-OG a:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: #f9ca24; 
+  }
+
+  .navbar-OG a.active {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #e74c3c;
+  }
+
+  /*.navbar::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #3498db, #e74c3c);
+    opacity: 0.6;
+  }*/
+
+</style>
+</head>
+<body>
+
+<div class="navbar-OG">
+
+  <a href="home.html" class="active">Home</a>
+  <a href="buy.html">Buy a home</a>
+  <a href="#">Sell a home</a>
+  <a href="#">Rent a home</a>
+  <a href="profile.html">Profile</a>
+  <a href="login.html">Logout</a>
+
+</div>
+
+
+</body>
+</html>

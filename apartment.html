@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Card Box</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column; /* Set the flex direction to column */
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0; /* Light gray background */
+        }
+        #NavBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 10px; 
+        }
+
+        /* ... (your existing styles) ... */
+
+        .card-box {
+    margin-top: 100px; /* Add top margin to create space from the navbar */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px; /* Add padding around the card-box */
+}
+
+/* ... (your existing styles) ... */
+
+
+        .card {
+            width: 350px; /* Increased card width */
+            height: 500px; /* Increased card height */
+            background-color: rgb(206, 198, 198);
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            transform-origin: bottom center;
+            display: flex;
+            flex-direction: column; /* Stack content vertically */
+            justify-content: space-between; /* Space content evenly */
+        }
+
+        .card:hover {
+            transform: scale(1.05) rotateX(5deg);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content horizontally */
+            justify-content: center; /* Center content vertically */
+            padding: 20px;
+            flex-grow: 1; /* Allow content to expand */
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 20px; /* Larger title */
+            color: #333; /* Darker text color */
+            text-align: center; /* Center the heading */
+        }
+
+        p {
+            margin: 10px 0 0;
+            font-size: 16px; /* Slightly larger text */
+            color: #555; /* Slightly darker text color */
+            text-align: center; /* Center the paragraph */
+        }
+
+        /* Add these styles to control the image */
+        .card-content img {
+            display: block;
+            margin: 0 auto;
+            max-width: 80%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        /* Button styles */
+        .card-button {
+            border: 2px solid rgb(239, 238, 233); /* Blue border */
+            border-radius: 5px; /* Rounded corners */
+            padding: 8px 12px; /* Add some padding */
+            background-color: white;
+            color: blue; /* Blue text color */
+            text-align: center;
+            text-decoration: none;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s, transform 0.2s;
+            align-self: center; /* Center the button horizontally */
+        }
+
+        .card-button:hover {
+            background-color: blue; /* Blue background */
+            color: white; /* White text color */
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div id="NavBar"></div>
+    <div class="card-box">
+        <!-- Card 1 -->
+        <div class="card">
+            <div class="card-content">
+                <h2>Apartment 1</h2>
+                <br>
+                <img src="Images/a1.jpg" alt="Card Image">
+                <p>Mayfair</p>
+                <br>
+                <p>Price : 20lakhs</p>
+                <br>
+                <br>
+                <a href="villas.html" class="card-button">View</a>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <div class="card-content">
+                <h2>Apartment 2</h2>
+                <br>
+                <img src="Images/a2.jpeg" alt="Card Image">
+                <p>Eton Villa</p>
+                <br>
+                <p>Price : 20lakhs</p>
+                <br>
+                <br>
+                <button class="card-button">View</button>
+            </div>
+        </div>
+
+        <!-- Add more cards here -->
+        <!-- Card 3 -->
+        <div class="card">
+            <div class="card-content">
+                <h2>Apartment 3</h2>
+                <br>
+                <img src="Images/a3.jpg" alt="Card Image">
+                <p>Solaris</p>
+                <br>
+                <p>Price : 20lakhs</p>
+                <br>
+                <br>
+                <button class="card-button">View</button>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+            <div class="card-content">
+                <h2>Apartment 4</h2>
+                <br>
+                <img src="Images/a4.jpg" alt="Card Image">
+                <p>Villa Moron</p>
+                <br>
+                <p>Price : 20lakhs</p>
+                <br>
+                <br>
+                <button class="card-button">View</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <h2>Apartment 5</h2>
+                <br>
+                <img src="Images/a5.jpg" alt="Card Image">
+                <p>Villa Vista</p>
+                <br>
+                <p>Price : 20lakhs</p>
+                <br>
+                <br>
+                <button class="card-button">View</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <h2>Apartment 6</h2>
+                <br>
+                <img src="Images/a6.avif" alt="Card Image">
+                <p>Villa Bella</p>
+                <br>
+                <p>Price : 20lakhs</p>
+                <br>
+                <br>
+                <button class="card-button">View</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <h2>Apartment 7</h2>
+                <br>
+                <img src="Images/a7.jpg" alt="Card Image">
+                <p>Villa Del Sol</p>
+                <br>
+                <p>Price : 20lakhs</p>
+                <br>
+                <br>
+                <button class="card-button">View</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <h2>Apartment 8</h2>
+                <br>
+                <img src="Images/a8.avif" alt="Card Image">
+                <p>The Majestic Escape</p>
+                <br>
+                <p>Price : 20lakhs</p>
+                <br>
+                <br>
+                <button class="card-button">View</button>
+            </div>
+        </div>
+
+        
+
+        <!-- Add more cards here -->
+    </div>
+</body>
+</html>
+<script>
+    fetch('OGNav.html')
+        .then(response => response.text())
+        .then(content => {
+            document.getElementById('NavBar').innerHTML = content;
+        });
+</script>
+

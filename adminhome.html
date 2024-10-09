@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden; /* Prevent vertical scrolling */
+  }
+  img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    z-index: -1; /* Place the image behind other elements */
+  }
+  
+  .navbar {
+    overflow: hidden;
+    background-color:transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    transition: background-color 0.3s ease-in-out;
+    z-index: 1000; 
+  }
+
+  .navbar a {
+    float: left;
+    display: block;
+    color: rgb(222, 220, 220);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: #f9ca24; 
+  }
+
+  .navbar a.active {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #e74c3c;
+  }
+
+  /*.navbar::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #3498db, #e74c3c);
+    opacity: 0.6;
+  }*/
+  .text-box {
+    color: #d2d8da;
+    position: absolute;
+    bottom: 8%;
+    font-size: 20px;
+}
+.text-box p {
+    font-size: 50px;
+    font-weight: 600;
+}
+.text-box h1 {
+    font-size: 60px;
+    line-height: 160px;
+    margin-left: -10px;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(Images/back.png);
+    -webkit-background-clip: text;
+    background-clip: text; /* Standard property with vendor prefixes */
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+@keyframes back {
+    100% {
+        background-position: 200px 0;
+    }
+}
+.text-box .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.text-box a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border: 2px solid #fff;
+    align-items: center;
+}
+.text-box a span {
+    font-size: 40px;
+    line-height: 15px;
+    margin-left: 5px;
+}
+
+</style>
+</head>
+<body>
+	<img src="Images/mansion.jpg">
+
+<div class="navbar">
+
+ 
+    <a href="adminhome.html" class="active">Home</a>
+    <a href="#">View</a>
+    <a href="#">Delete</a>
+    <a href="adminlogin.html">Logout</a>
+
+</div>
+
+<div style="margin-top: 80px;">
+  <!-- Content goes here -->
+</div>
+<div class="text-box">
+<h1>&nbsp;“Welcome Admin”</h1>
+&nbsp;
+<a href="">EXPLORE PORTFOLIO</a>
+<a href="">&nbsp;CONNECT WITH US </a>
+<span>You Can Explore More About My Portfolio And Personal Life Experiences Here.</span>
+</div>
+
+</body>
+</html>

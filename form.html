@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Event</title>
+    <style>
+        .crebody {
+           
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        .create-event-container {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            max-width: 1000px;
+            gap: 20px;
+        }
+
+        .create-event-box {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 45%;
+            animation: slideIn 0.5s ease-in-out;
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+
+        .create-event-box:hover {
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .create-event-header {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-field {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        input[type="text"],
+        textarea,
+        input[type="date"],
+        input[type="file"],
+        input[type="number"],
+        select,
+        input[type="email"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s, transform 0.3s;
+            background-color: #f5f5f5;
+        }
+
+        input[type="text"]:hover,
+        textarea:hover,
+        input[type="date"]:hover,
+        input[type="file"]:hover,
+        input[type="number"]:hover,
+        select:hover,
+        input[type="email"]:hover,
+        input[type="tel"]:hover {
+            border-color: #777;
+            transform: translateY(-2px);
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        select {
+            appearance: none;
+            background-image: url("down-arrow.svg");
+            background-repeat: no-repeat;
+            background-position: right center;
+        }
+
+        .create-button {
+            background-color: #ff5733;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .create-button:hover {
+            background-color: #ff754c;
+        }
+
+        /* Required Indicator */
+        .form-field:required::after {
+            content: "*";
+            color: red;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbarContainer"></div>
+    <div class="crebody">
+            <div class="create-event-container">
+                <div class="create-event-box">
+                    <h2 class="c">Sellers Form</h2>
+                    <form>
+                        <div class="form-field">
+                            <label for="eventName">Sellers Name</label>
+                            <input type="text" id="eventName" name="eventName" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="photoCategory">Property Type</label>
+                            <select id="photoCategory" name="photoCategory" required>
+                                <option value="exterior">Villas</option>
+                                <option value="interior">Apartments</option>
+                                <option value="kitchen">Gatedcommunity</option>
+                                <option value="bedroom">Mansions</option>
+                                <!-- Add more options as needed -->
+                            </select>
+                        </div>
+                        <div class="form-field">
+                            <label for="photoCategory">Property Sub Type</label>
+                            <select id="photoCategory" name="photoCategory" required>
+                                <option value="exterior">Commercial</option>
+                                <option value="interior">Residential</option>
+                                <option value="kitchen"</option>
+                                <!-- Add more options as needed -->
+                            </select>
+                        </div>
+                        <div class="form-field">
+                            <label for="eventCost">Property Size</label>
+                            <input type="text" id="eventCost" name="eventCost" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="eventCost">Cost Range of Property</label>
+                            <input type="text" id="eventCost" name="eventCost" required>
+                        </div>
+                        
+                        <div class="form-field">
+                            <label for="eventLocation">Sellers Property Location</label>
+                            <input type="text" id="eventLocation" name="eventLocation" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="eventPhoto">Sellers Property Photo</label>
+                            <input type="file" id="eventPhoto" name="eventPhoto" accept="image/*" required>
+                        </div>
+                </div>
+                <div class="create-event-box">
+                    <h2 class="create-event-header">Sellers Registration</h2>
+                    <form>
+                        <div class="form-field">
+                            <label for="contactNumber">Contact Number</label>
+                            <input type="tel" id="contactNumber" name="contactNumber" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="contactAddress">Contact Address</label>
+                            <input type="text" id="contactAddress" name="contactAddress" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="contactEmail">Contact Email</label>
+                            <input type="email" id="contactEmail" name="contactEmail" required>
+                        </div> 
+                        <div class="form-field">
+                            <label for="eventAddress">Seller Property Address</label>
+                            <input type="text" id="eventAddress" name="eventAddress" required>
+                        </div>
+                        <button class="create-button" type="submit">Create Event</button>
+                    </form>
+                </div>
+            </div>
+        
+    </div>
+</body>
+</html>

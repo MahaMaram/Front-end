@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+    <div id="NavBar"></div>
+    <div class="box">
+        <span class="borderLine"></span>
+        <!-- Registration Form -->
+        <form id="registrationForm" action="/index.html">
+            <h2>Sign up</h2>
+            <div class="inputBox">
+                <input type="text" required="required">
+                <span>Full Name</span>
+                <i></i>
+            </div>
+            <div class="inputBox">
+                <input type="text" required="required">
+                <span>Username</span>
+                <i></i>
+            </div>
+            <div class="inputBox">
+                <input type="email" required="required">
+                <span>Email</span>
+                <i></i>
+            </div>
+            <div class="inputBox">
+                <input type="password" required="required">
+                <span>Password</span>
+                <i></i>
+            </div>
+            <br>
+            <input type="submit" value="Sign up">    
+        </form>
+    </div>
+</body>
+</html>
+<script>
+    fetch('Nav.html')
+        .then(response => response.text())
+        .then(content => {
+            document.getElementById('NavBar').innerHTML = content;
+        });
+</script>

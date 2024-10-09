@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NavBar</title>
+        <link rel="stylesheet" href="navbar.css">
+    </head>
+    <body>
+        <style>
+            #NavBar {
+            position: fixed;
+            top: 0;
+            left: 15%;
+            padding: 10px; 
+        }
+        </style>
+        <div class="container">
+           <nav id="NavBar"></nav>
+        <div class="text-box">
+            <p>–Laura Ingalls Wilder</p>
+        <h1>“Home is the nicest word there is”</h1>
+        <a href="">EXPLORE PORTFOLIO</a>
+        <a href="">CONNECT WITH US </a>
+        <span>You Can Explore More About My Portfolio And Personal Life Experiences Here.</span> 
+        </div>
+        </div>
+    </body>
+</html>
+<script>
+    fetch('nav.html')
+        .then(response => response.text())
+        .then(content => {
+            document.getElementById('NavBar').innerHTML = content;
+        });
+</script>
