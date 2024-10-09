@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="about.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+    <div class="banner">
+        <div id="NavBar"></div>
+        <br>
+        <br>
+    
+        <div class="heading">
+        
+            <h1>About Us</h1>
+            <p>It is similar to Real Estate Management System (REMS)</p>
+        </div>
+
+        <section class="about-us">
+            <!--<img src="/Images/rr.jpeg">-->
+            <div class="content">
+                <h2>
+                    Real Estate Management System (REMS) is an online software application </h2>
+                    <p>Real estate management is not a new concept. Property managers have been managing relevant data for as long as the rental market has existed. However, as new technologies become more widely available, the capabilities of real estate management are advancing.
+        
+                        Today’s real estate management software is used to connect property managers and tenants like never before. That’s because modern real estate management tools incorporate the same technology used in customer relationship management (CRM). With CRM for real estate management, property managers can now offer their tenants the kind of high-level customer service that is so important to developing long-term business relationships.
+                        
+                        </p>
+                        <a href="cardslide.html"><button class="read-more-btn">More</button></a> 
+            </div>
+            
+        </section>
+    
+    </div>
+    </section>
+
+    <section class="newban">
+        <h1> I am Chitti</h1>
+    </section>
+    
+</body>
+</html>
+<script>
+    fetch('nav.html')
+        .then(response => response.text())
+        .then(content => {
+            document.getElementById('NavBar').innerHTML = content;
+        });
+</script>
